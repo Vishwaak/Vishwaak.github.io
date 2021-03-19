@@ -8,13 +8,14 @@
 .subtitle {
     margin-top: -10px;
     padding-bottom: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .folio-title {
   font-weight: bold;
   display: inline;
   padding-right: 0.4rem;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   padding-bottom: 1rem;
   
 }
@@ -22,10 +23,37 @@
 .folio-sinopsis {
   display: inline;
   color: #9B9696;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   
 }
+h1 {
+  font-size: 4rem;
+  margin: 0 0 1rem 0;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
 
+.icons {
+  text-align: center;
+  padding: 1rem;
+  a {
+    color: black;
+    &:visited {
+      color: black;
+    }
+  }
+  .fab {
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    transition:         transform .2s ease-in-out;
+
+    &:hover {
+    -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+    }
+
+  }
+ 
+}
 .container {
 
   padding: 20rem 20rem;
@@ -43,6 +71,7 @@ input {
   box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);
   
 }
+
 
 .tab {
   width: 100%;
@@ -115,6 +144,11 @@ input:checked {
 }
 }
 
+.dev {
+
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
 
 @media(max-width:800px) {
 

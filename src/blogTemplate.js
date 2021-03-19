@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from './components/Layout';
 import {graphql} from 'gatsby';
-
+import './postUI.scss';
 
 //export query so gatsby can grab it as a prop
 export const query = graphql`
@@ -31,7 +31,9 @@ const blogTemplate = (props) => {
 
         <h1>{props.data.markdownRemark.frontmatter.title}</h1>
         <p>{props.data.markdownRemark.frontmatter.date}</p>
+        <div className="postUI">
         <div dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html}}></div>
+        </div>
     </Layout>
  )
 }

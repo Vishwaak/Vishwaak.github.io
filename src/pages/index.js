@@ -2,6 +2,7 @@ import React from "react";
 import Layout from '../components/Layout';
 import './index.styles.scss';
 import portfolioItems from '../components/portfolio-items';
+import {Link, graphql, useStaticQuery} from 'gatsby'
 
 function renderFolio() {
   return  portfolioItems.map(({title, sinopsis, idx, desc, repo, live,img}) => {
@@ -31,12 +32,33 @@ function renderFolio() {
 }
 
 const Index = () => {
+        const data = useStaticQuery(graphql`
+        query {
+            site{
+                siteMetadata {
+                    title
+                }
+            }
+        }
+    `)
 
-    
     return (
         <Layout>
-            <h1 className="opener">I am developer</h1>
-            <p className="subtitle">These are a few of my projects. Open up for repo and live version!</p>
+            <div className="dev">
+                        <h1>{data.site.siteMetadata.title}</h1>
+                        <span className="attr">Deep learning enthusiast </span>
+                        <span className="dot">•</span>
+                        <span className="attr">Developer</span>
+                        <span className="dot">•</span>
+                        <span className="attr">Student</span>
+                        </div>
+                        <div className="icons">
+                        <a href='https://github.com/vishwaak'><i className="fab fa-github"></i></a>
+                        <a href='https://twitter.com/vishwaakchandra'><i className="fab fa-twitter"></i></a>
+                        <a href='https://www.linkedin.com/in/vishwaak-chandran/'><i className="fab fa-linkedin"></i></a>
+                        </div>
+            <h3 className="opener">I like to experiment and explore things</h3>
+            <p className="subtitle">Here are few of my project. Click to explore them :)</p>
             {renderFolio()}
         </Layout>
     )
