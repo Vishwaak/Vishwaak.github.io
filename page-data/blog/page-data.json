@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-pages-blog-js","path":"/blog/","webpackCompilationHash":"8b89777d19c6479fa8b8","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"Game Theory Part-1","date":"2021-03-18","sinopsis":"What is game thoery? Why game theory?"},"fields":{"slug":"FirstPost"}}}]}},"pageContext":{"isCreatedByStatefulCreatePages":true}}}
